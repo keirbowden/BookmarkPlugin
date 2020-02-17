@@ -31,7 +31,6 @@ export default class Find extends SfdxCommand {
   public static args = [{name: 'file'}];
 
   protected static flagsConfig = {
-    // flag with a value (-n, --name=VALUE)
     term: flags.string({char: 't', description: messages.getMessage('termFlagDescription')})
   };
 
@@ -44,7 +43,7 @@ export default class Find extends SfdxCommand {
     
     const items=await bookmarks.findBookmarks(conn, term);
 
-    utils.openBookmark('Find Results', items, this.ux);
+    utils.openBookmark(messages.getMessage('findTitle'), items, this.ux);
 
     // Return an object to be displayed with --json
     return { result: true };

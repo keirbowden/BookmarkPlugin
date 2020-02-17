@@ -20,8 +20,6 @@ export default class List extends SfdxCommand {
   `
   ];
 
-  public static args = [{name: 'file'}];ˆ
-
   // Comment this out if your command does not require an org username
   protected static requiresUsername = true;
 
@@ -33,7 +31,7 @@ export default class List extends SfdxCommand {
 
     const bookmarks=await Bookmarks.getAllBookmarks(conn);
 
-    Utils.openBookmark('All bookmarks', bookmarks, this.ux);
+    Utils.openBookmark(messages.getMessage('listTitle'), bookmarks, this.ux);
 
     // Return an object to be displayed with --json
     return { result: true };

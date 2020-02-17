@@ -1,0 +1,10 @@
+{
+  "commandDescription": "Create a new bookmark",
+  "descriptionFlagDescription": "Brief description of bookmark",
+  "nameFlagDescription": "Bookmark name",
+  "shortcodeFlagDescription": "Short (3 character) code for the bookmark",
+  "tagsFlagDescription": "Comma separated list of tags for the bookmark",
+  "urlFlagDescription": "The Bookmark URL",
+  "createError": "Error creating bookmark",
+  "createSuccess": "Successfully created bookmark"
+}

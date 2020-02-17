@@ -3,7 +3,6 @@ import { AnyJson } from '@salesforce/ts-types';
 import { Messages } from '@salesforce/core';
 import Bookmarks = require('../../shared/bookmarks');
 import Utils = require('../../shared/utils');
-//import chooseOrOpen = require('../../../shared/chooseOrOpen');
 
 // Initialize Messages with the current plugin directory
 Messages.importMessagesDirectory(__dirname);
@@ -41,7 +40,7 @@ export default class ShortCode extends SfdxCommand {
     
     const items=await Bookmarks.getBookmarkByShortCode(conn, code);
 
-    Utils.openBookmark('Shortcode', items, this.ux);
+    Utils.openBookmark(messages.getMessage('shortcodeTitle'), items, this.ux);
 
     // Return an object to be displayed with --json
     return { result: true };

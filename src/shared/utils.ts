@@ -1,7 +1,10 @@
 import cli from 'cli-ux';
 import { Bookmark } from './types';
+import { Messages } from '@salesforce/core';
 
 export async function openBookmark(title : String, bookmarks : Array<Bookmark>, ux) {
+    const messages = Messages.loadMessages('bbbookmarks', 'utils');
+
     let bookmark;
 
     if (bookmarks.length>1) {
@@ -15,8 +18,9 @@ export async function openBookmark(title : String, bookmarks : Array<Bookmark>, 
               ux.log((idx + 1) + ') ' + bookmarks[idx].Name + ' [' + bookmarks[idx].Short_Code__c + '] - ' + bookmarks[idx].Description__c);
             }
             ux.log('');
-            ux.log('0) Quit');
-            let chosen=await cli.prompt('Choose a bookmark');
+            ux.log('0) ' + messages.getMessage('quit'));
+            
+            let chosen=await cli.prompt(messages.getMessage('chooseBookmark'));
             chosenVal=Number.parseInt(chosen);
             if (Number.isInteger(chosenVal)) {
                 if (0==chosenVal) {
@@ -25,7 +29,7 @@ export async function openBookmark(title : String, bookmarks : Array<Bookmark>, 
             }
 
             if ( (Number.isNaN(chosenVal)) || (chosenVal<0) || (chosenVal>bookmarks.length)) {
-              ux.log('Please choose a value between 0 and ' + bookmarks.length);
+              ux.log(messages.getMessage('chooseValid') + ' ' + bookmarks.length);
               chosenVal=-1;
             }
         }
@@ -35,11 +39,11 @@ export async function openBookmark(title : String, bookmarks : Array<Bookmark>, 
         bookmark=bookmarks[0];
     }
     else {
-        ux.log('No bookmarks found');
+        ux.log(messages.getMessage('noBookmarksFound'));
     }
 
     if (bookmark) {
-        ux.log('Opening ' + bookmark.Description__c);
+        ux.log(messages.getMessage('opening') + ' ' + bookmark.Description__c);
         const open = require('open');
 
         await open(bookmark.URL__c);
