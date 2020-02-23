@@ -1,7 +1,5 @@
 {
-  "commandDescription": "print a greeting and your org IDs",
+  "commandDescription": "Retrieve a bookmark based on its shortcode",
   "shortcodeFlagDescription": "Shortcode of bookmark",
-  "forceFlagDescription": "example boolean flag",
-  "errorNoOrgResults": "No results found for the org '%s'.",
   "shortCodeTitle": "Shortcode"
 }

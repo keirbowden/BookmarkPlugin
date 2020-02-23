@@ -1,7 +1,7 @@
 {
   "name": "bbbookmarks",
   "description": "Bookmarks example plugin for ApexHours",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Keir Bowden @keirbowden",
   "bugs": "https://github.com/keirbowden/bbbookmarks/issues",
   "dependencies": {
@@ -45,9 +45,6 @@
     "commands": "./lib/commands",
     "bin": "sfdx",
     "topics": {
-      "hello": {
-        "description": "Commands to say hello."
-      },
       "bbbm": {
         "description": "Bob Buzzard's Bookmarks."
       }

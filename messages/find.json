@@ -1,6 +1,5 @@
 {
   "commandDescription": "Find a bookmark based on a search term that appears in any field",
   "termFlagDescription": "Term to look for",
-  "errorNoOrgResults": "No results found for the org '%s'.",
   "findTitle": "Find Results"
 }

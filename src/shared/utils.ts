@@ -1,4 +1,3 @@
-import cli from 'cli-ux';
 import { Bookmark } from './types';
 import { Messages } from '@salesforce/core';
 
@@ -20,7 +19,7 @@ export async function openBookmark(title : String, bookmarks : Array<Bookmark>, 
             ux.log('');
             ux.log('0) ' + messages.getMessage('quit'));
             
-            let chosen=await cli.prompt(messages.getMessage('chooseBookmark'));
+            let chosen=await ux.prompt(messages.getMessage('chooseBookmark'));
             chosenVal=Number.parseInt(chosen);
             if (Number.isInteger(chosenVal)) {
                 if (0==chosenVal) {
@@ -49,4 +48,3 @@ export async function openBookmark(title : String, bookmarks : Array<Bookmark>, 
         await open(bookmark.URL__c);
     }
 }
-

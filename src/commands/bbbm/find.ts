@@ -16,13 +16,16 @@ export default class Find extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx bmdoc:all 
-  Hello world! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-  My hub org id is: 00Dxx000000001234
-  `,
-  `$ sfdx bmdoc:all
-  Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-  `
+  `$ sfdx bbbm:find -u ApexHoursDocs -t Develop 
+  
+*****************************
+Find Results
+
+1) LWC Dev Guide [LWCDG] - Official Lightning Web Components Developer Guide from Salesforce
+2) Apex Dev Guide [APXDG] - Official Salesforce Apex Developer Guide
+
+0) Quit
+Choose a bookmark:`
   ];
 
   // Comment this out if your command does not require an org username

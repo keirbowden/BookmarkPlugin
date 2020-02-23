@@ -16,9 +16,19 @@ export default class List extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx bbbm:all 
-  `
-  ];
+    `$ sfdx bbbm:find -u ApexHoursDocs
+  
+*****************************
+All bookmarks
+
+1) Bob Buzzard Blog [BLOG] - Bob Buzzard Blog Homepage
+2) LWC Dev Guide [LWCDG] - Official Lightning Web Components Developer Guide from Salesforce
+3) Apex Dev Guide [APXDG] - Official Salesforce Apex Developer Guide
+4) Google [GGL] - Google home page
+
+0) Quit
+Choose a bookmark:`
+];
 
   // Comment this out if your command does not require an org username
   protected static requiresUsername = true;

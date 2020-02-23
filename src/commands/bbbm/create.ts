@@ -17,9 +17,15 @@ export default class Create extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx bbbm:shortcode
-  `
-  ];
+    `$ sfdx bbbm:create -u ApexHoursDocs 
+                  -n "Bob Buzzard Blog" 
+                  -d "Bob Buzzard Blog Homepage"
+                  -s BLOG
+                  -l https://bobbuzzard.blogspot.com
+                  -t "Blog,Developer,Apex"
+  
+Successfully created bookmark`
+      ];
 
   protected static flagsConfig = {
     name: flags.string({char: 'n', description: messages.getMessage('nameFlagDescription')}),

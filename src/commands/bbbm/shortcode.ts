@@ -16,8 +16,8 @@ export default class ShortCode extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx bbbm:shortcode 
-  `
+    `$ sfdx bbbm:shortcode -u ApexHoursDoc -c Blog 
+  Opening Bob Buzzard Blog Homepage`
   ];
 
   public static args = [{name: 'file'}];ˆ
@@ -40,7 +40,7 @@ export default class ShortCode extends SfdxCommand {
     
     const items=await Bookmarks.getBookmarkByShortCode(conn, code);
 
-    Utils.openBookmark(messages.getMessage('shortcodeTitle'), items, this.ux);
+    Utils.openBookmark(messages.getMessage('shortCodeTitle'), items, this.ux);
 
     // Return an object to be displayed with --json
     return { result: true };
