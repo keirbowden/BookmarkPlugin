@@ -1,7 +1,7 @@
 {
   "name": "bbbookmarks",
   "description": "Bookmarks example plugin for ApexHours",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Keir Bowden @keirbowden",
   "bugs": "https://github.com/keirbowden/bbbookmarks/issues",
   "dependencies": {
@@ -10,6 +10,7 @@
     "@oclif/errors": "^1",
     "@salesforce/command": "^2",
     "@salesforce/core": "^2",
+    "open": "^7.0.2",
     "tslib": "^1"
   },
   "devDependencies": {

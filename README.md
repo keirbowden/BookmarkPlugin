@@ -14,7 +14,7 @@ $ npm install -g bbbookmarks
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-bbbookmarks/1.0.0 darwin-x64 node-v8.11.3
+bbbookmarks/1.0.1 darwin-x64 node-v8.11.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -69,7 +69,7 @@ EXAMPLE
   Successfully created bookmark
 ```
 
-_See code: [lib/commands/bbbm/create.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.0/lib/commands/bbbm/create.js)_
+_See code: [lib/commands/bbbm/create.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.1/lib/commands/bbbm/create.js)_
 
 ## `sfdx bbbm:find [-t <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -107,7 +107,7 @@ EXAMPLE
   Choose a bookmark:
 ```
 
-_See code: [lib/commands/bbbm/find.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.0/lib/commands/bbbm/find.js)_
+_See code: [lib/commands/bbbm/find.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.1/lib/commands/bbbm/find.js)_
 
 ## `sfdx bbbm:list [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -145,7 +145,7 @@ EXAMPLE
   Choose a bookmark:
 ```
 
-_See code: [lib/commands/bbbm/list.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.0/lib/commands/bbbm/list.js)_
+_See code: [lib/commands/bbbm/list.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.1/lib/commands/bbbm/list.js)_
 
 ## `sfdx bbbm:shortcode [-s <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -175,5 +175,5 @@ EXAMPLE
      Opening Bob Buzzard Blog Homepage
 ```
 
-_See code: [lib/commands/bbbm/shortcode.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.0/lib/commands/bbbm/shortcode.js)_
+_See code: [lib/commands/bbbm/shortcode.js](https://github.com/keirbowden/bbbookmarks/blob/v1.0.1/lib/commands/bbbm/shortcode.js)_
 <!-- commandsstop -->
